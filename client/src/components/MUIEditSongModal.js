@@ -8,12 +8,13 @@ const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
+    height: '25%',
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 4,
+    p: 5,
 };
 
 export default function MUIEditSongModal() {
@@ -49,7 +50,7 @@ export default function MUIEditSongModal() {
 
     return (
         <Modal
-            open={store.listMarkedForDeletion !== null}
+            open={store.isEditSongModalOpen !== null}
         >
             <Box sx={style}>
             <div
@@ -61,25 +62,27 @@ export default function MUIEditSongModal() {
                 className="modal-root">
                 <div
                     id="edit-song-modal-header"
-                    className="modal-north">Edit Song</div>
+                    className="modal-north"
+                    style = {{fontSize:'xxx-large'}}>Edit Song</div>
                 <div
                     id="edit-song-modal-content"
                     className="modal-center">
-                    <div id="title-prompt" className="modal-prompt">Title:</div>
+                    <div id="title-prompt" className="modal-prompt"
+                    style = {{fontSize:'x-large'}}>Title:</div>
                     <input 
                         id="edit-song-modal-title-textfield" 
                         className='modal-textfield' 
                         type="text" 
                         defaultValue={title} 
                         onChange={handleUpdateTitle} />
-                    <div id="artist-prompt" className="modal-prompt">Artist:</div>
+                    <div id="artist-prompt" className="modal-prompt"style = {{fontSize:'x-large'}}>Artist:</div>
                     <input 
                         id="edit-song-modal-artist-textfield" 
                         className='modal-textfield' 
                         type="text" 
                         defaultValue={artist} 
                         onChange={handleUpdateArtist} />
-                    <div id="you-tube-id-prompt" className="modal-prompt">You Tube Id:</div>
+                    <div id="you-tube-id-prompt" className="modal-prompt"style = {{fontSize:'x-large'}}>You Tube Id:</div>
                     <input 
                         id="edit-song-modal-youTubeId-textfield" 
                         className='modal-textfield' 

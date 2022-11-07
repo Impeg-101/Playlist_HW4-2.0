@@ -129,7 +129,7 @@ body {
   position: absolute;
   left: 0%;
   top: 0%;
-  width: 100%;
+  width: smaller;
   height: 10%;
   text-align: center;
   font-size: 24pt;
@@ -289,8 +289,10 @@ input {
 
 .modal-dialog {
   position: relative;
-  max-width: 800px;
-  max-height: 80vh;
+  max-width: 1200;
+  max-height: 600vh;
+  display: flex;
+  flex-direction: column;
   background: var(--swatch-complement);
   overflow: auto;
   cursor: default;
